@@ -1,0 +1,25 @@
+<p>
+  <strong>Exercise:</strong>
+  <%= exercise.name %>
+</p>
+
+<p>
+  <strong>Reps:</strong>
+  <%= exercise.reps %>
+</p>
+
+<p>
+  <strong>Sets:</strong>
+  <%= exercise.sets %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= exercise.day %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Exercise', [exercise.schedule, exercise],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_21_002006) do
+ActiveRecord::Schema.define(version: 2018_11_21_132646) do
+
+  create_table "exercises", force: :cascade do |t|
+    t.string "name"
+    t.integer "reps"
+    t.integer "sets"
+    t.string "day"
+    t.integer "schedule_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["schedule_id"], name: "index_exercises_on_schedule_id"
+  end
 
   create_table "schedules", force: :cascade do |t|
     t.string "title"

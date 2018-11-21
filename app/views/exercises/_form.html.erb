@@ -1,0 +1,21 @@
+<%= form_with(model: [ @schedule, @schedule.exercises.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :reps %><br>
+    <%= form.number_field :reps %>
+  </p>
+  <p>
+    <%= form.label :sets %><br>
+    <%= form.number_field :sets %>
+  </p>
+  <p>
+    <%= form.label :day %><br>
+    <%= form.text_area :day %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

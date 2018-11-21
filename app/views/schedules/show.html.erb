@@ -7,4 +7,12 @@
   <strong>Text:</strong>
   <%= @schedule.text %>
 </p>
+
+<h2>Exercises</h2>
+<%= render @schedule.exercises %>
+
+<h2>Add a exercise:</h2>
+<%= render 'exercises/form' %>
+
+<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
 <%= link_to 'Back', schedules_path %>
