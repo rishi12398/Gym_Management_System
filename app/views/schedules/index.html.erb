@@ -1,0 +1,18 @@
+
+<h1>Listing schedules</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th></th>
+  </tr>
+
+  <% @schedules.each do |schedule| %>
+    <tr>
+      <td><%= schedule.title %></td>
+      <td><%= schedule.text %></td>
+      <td><%= link_to 'Show', schedule_path(schedule) %></td>
+    </tr>
+  <% end %>
+</table>
