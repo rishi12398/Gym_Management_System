@@ -3,19 +3,17 @@
   <strong>Title:</strong>
   <%= @schedule.title %>
 </p>
-
 <p>
   <strong>Text:</strong>
   <%= @schedule.text %>
 </p>
-
 <h2>Exercises</h2>
 <%= render @schedule.exercises %>
-
+<%= link_to 'Completed', user_flop_path(@user) %> |
 <% if current_user.id == 1 %>
   <h2>Add a exercise:</h2>
   <%= render 'exercises/form' %>
-  <%= link_to 'Completed', user_flop_path(@user) %> |
+
   <%= link_to 'Edit', edit_schedule_path(@schedule) %> |
   <%= link_to 'Back', schedules_path %>
 <% end %>
