@@ -11,8 +11,10 @@
 <h2>Exercises</h2>
 <%= render @schedule.exercises %>
 
-<h2>Add a exercise:</h2>
-<%= render 'exercises/form' %>
+<% if current_user.id == 1 %>
+  <h2>Add a exercise:</h2>
+  <%= render 'exercises/form' %>
 
-<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
-<%= link_to 'Back', schedules_path %>
+  <%= link_to 'Edit', edit_schedule_path(@schedule) %> |
+  <%= link_to 'Back', schedules_path %>
+<% end %>

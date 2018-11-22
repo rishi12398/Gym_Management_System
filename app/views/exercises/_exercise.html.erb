@@ -17,9 +17,10 @@
   <strong>Day:</strong>
   <%= exercise.day %>
 </p>
-
+<% if current_user.id == 1 %>
 <p>
   <%= link_to 'Destroy Exercise', [exercise.schedule, exercise],
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
 </p>
+<% end %>
