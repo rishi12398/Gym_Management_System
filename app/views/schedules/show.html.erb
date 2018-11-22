@@ -1,3 +1,4 @@
+<%= Time.now %>
 <p>
   <strong>Title:</strong>
   <%= @schedule.title %>
@@ -14,7 +15,7 @@
 <% if current_user.id == 1 %>
   <h2>Add a exercise:</h2>
   <%= render 'exercises/form' %>
-
+  <%= link_to 'Completed', user_flop_path(@user) %> |
   <%= link_to 'Edit', edit_schedule_path(@schedule) %> |
   <%= link_to 'Back', schedules_path %>
 <% end %>

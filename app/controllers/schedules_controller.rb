@@ -3,11 +3,15 @@ class SchedulesController < ApplicationController
     @schedule = Schedule.new
   end
 
+  def update_progress
+
+  end
   def index
     @schedules = Schedule.all
   end
 
   def show
+    @user = current_user
     @schedule = Schedule.find(params[:id])
   end
 
