@@ -1,0 +1,4 @@
+<h1>Days :</h1><%= @user.days %>
+<h1>Progress :</h1><%= @user.progress %><br>
+<h1>Last Updated :<%= (Time.now - @user.updated_at)/60%> minutes ago<h1>
+<%= link_to 'Back', schedules_path %>

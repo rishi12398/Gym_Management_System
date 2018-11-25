@@ -1,19 +1,29 @@
-<%= Time.now %>
-<p>
-  <strong>Title:</strong>
-  <%= @schedule.title %>
-</p>
-<p>
-  <strong>Text:</strong>
-  <%= @schedule.text %>
-</p>
-<h2>Exercises</h2>
-<%= render @schedule.exercises %>
-<%= link_to 'Completed', user_flop_path(@user) %> |
-<% if current_user.id == 1 %>
-  <h2>Add a exercise:</h2>
-  <%= render 'exercises/form' %>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-  <%= link_to 'Edit', edit_schedule_path(@schedule) %> |
-  <%= link_to 'Back', schedules_path %>
-<% end %>
+<div class="modal-dialog">
+  <div class="loginmodal-container">
+	<%= Time.now %>
+	<p>
+	  <strong>Title:</strong>
+	  <%= @schedule.title %>
+	</p>
+
+	<p>
+	  <strong>Text:</strong>
+	  <%= @schedule.text %>
+	</p>
+
+	<p>Day &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exercise&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;  Reps&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Sets</p>
+	<%= render @schedule.exercises %>
+	<%= link_to 'Completed', user_flop_path(@user) %> |
+	<% if current_user.id == 1 %>
+	  <h2>Add a exercise:</h2>
+	  <%= render 'exercises/form' %>
+
+	  <%= link_to 'Edit', edit_schedule_path(@schedule) %> |
+	  <%= link_to 'Back', schedules_path %>
+	<% end %>
+  </div>
+</div>

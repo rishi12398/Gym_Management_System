@@ -1,26 +1,34 @@
-<p>
-  <strong>Exercise:</strong>
-  <%= exercise.name %>
-</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+   <td>
+    <%= exercise.day %>
+  </td>
+  <td>
+    <%= exercise.name %>
+  </td>
 
-<p>
-  <strong>Reps:</strong>
-  <%= exercise.reps %>
-</p>
+  <td>
+    <%= exercise.reps %>
+  </td>
 
-<p>
-  <strong>Sets:</strong>
-  <%= exercise.sets %>
-</p>
+  <td>
+    <%= exercise.sets %>
+  </td>
 
-<p>
-  <strong>Day:</strong>
-  <%= exercise.day %>
-</p>
-<% if current_user.id == 1 %>
-<p>
-  <%= link_to 'Destroy Exercise', [exercise.schedule, exercise],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p>
-<% end %>
+ 
+  <% if current_user.id == 1 %>
+  <td>
+    <%= link_to 'Destroy Exercise', [exercise.schedule, exercise],
+                 method: :delete,
+                 data: { confirm: 'Are you sure?' } %>
+  </td>
+  <% end %>
+</table>

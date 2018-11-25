@@ -1,4 +1,8 @@
-<h1>Days :</h1><%= @user.days %>
-<h1>Progress :</h1><%= @user.progress %><br>
-<h1>Last Updated :<%= (Time.now - @user.updated_at)/60%> minutes ago<h1>
-<%= link_to 'Back', schedules_path %>
+<div class="modal-dialog">
+  <div class="loginmodal-container">
+    <h1>Days :<%= @user.days %></h1>
+    <h1>Progress :<%= @user.progress %></h1>
+    <h1>Last Updated <%= (Time.now - @user.updated_at)/60%> minutes ago<h1>
+    <%= link_to 'Back', schedules_path %>
+</div>
+</div>
