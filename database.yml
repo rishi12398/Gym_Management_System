@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  port: 5432
+  username: postgres
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
+
+development:
+  <<: *default
+  database: development #CHANGE ME
+
+test:
+  <<: *default
+  database: test #CHANGE ME
+
+production:
+  <<: *default
+  database: production #CHANGE ME
